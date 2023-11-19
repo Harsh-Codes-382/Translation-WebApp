@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>H_Translate</title>
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" href="translate.png" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="wrapper">
+      <div class="text_input">
+        <textarea class="from_text" placeholder="Enter your text" maxlength="5000"
+          onkeyup="countChars(this)"></textarea>
+        <!-- "this" means ki yeh point krra hai iski value pr so we are passing 'this' as parameter in function -->
+        <textarea class="to_text" placeholder="Translated text" readonly disabled></textarea>
+      </div>
+      <div class="limits">
+        <p id="Count">0/5000 Characters</p>
+      </div>
+      <ul class="controls">
+        <li class="row from">
+          <div class="icons">
+            <i id="from" class="fas fa-volume-up" title="Speech Text"></i>
+            <i id="from" class="fas fa-copy" title="copy to clipboard"></i>
+          </div>
+          <select></select>
+        </li>
+        <li class="exchange" title="Exchange"><i class="fas fa-exchange-alt"></i></li>
+        <li class="row to">
+          <select> </select>
+          <div class="icons">
+            <i id="to" class="fas fa-volume-up" title="Speech Text"></i>
+            <i id="to" class="fas fa-copy" title="copy to clipboard"></i>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <button>Translate text</button>
+  </div>
+  
+  <script src="js/Countries.js"></script>
+  <script src="js/script.js"></script>
+  <script src="https://replit.com/public/js/replit-badge.js" theme="dark" defer></script>
+</body>
+
+</html>
